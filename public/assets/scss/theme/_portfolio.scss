@@ -1,0 +1,236 @@
+// portfolio page css
+.cm-page-template {
+    .main-title {
+        u {
+            display: block;
+        }
+    }
+}
+
+.cm-portfolio {
+    .portfolio-related {
+        &:not(:hover) {
+            opacity: .4;
+            transition: var(--transition);
+        }
+    }
+
+    .cm-portfolio-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 25px;
+        grid-row-gap: 50px;
+
+        @include mq($sm) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .single-portfolio-content {
+            width: 100%;
+
+            &:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            .cm-portfolio-thumb {
+                max-width: 100%;
+                position: relative;
+
+                @include mq($sm) {
+                    max-width: 100%;
+                }
+
+                >img {
+                    border-radius: 20px;
+                    width: 100%;
+
+                    @include mq($sm) {
+                        width: 100%;
+                        min-height: 280px;
+                        object-fit: cover;
+                    }
+                }
+
+                &:hover {
+                    .cm-portfolio-cat {
+                        background: var(--cm-primary);
+                    }
+
+                    .cm-round-btn {
+                        transform: translate(-50%, -50%);
+                        opacity: 1;
+                    }
+                }
+
+                .cm-portfolio-cat {
+                    padding: 8px 14px;
+                    border-radius: 25px;
+                    background: #2A2E2E;
+                    color: var(--cm-white);
+                    line-height: 100%;
+                    position: absolute;
+                    left: 30px;
+                    top: 30px;
+                    transition: var(--transition);
+                }
+
+                .cm-round-btn {
+                    height: 70px;
+                    width: 70px;
+                    @include mq($lg){
+                        height: 60px;
+                        width: 60px;
+                    }
+                    @include mq($xs) {
+                        height: 50px;
+                        width: 50px;
+                    }
+
+                    border-radius: 50%;
+                    background: var(--cm-primary);
+                    color: var(--cm-white);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: var(--transition);
+                    opacity: 0;
+                }
+            }
+
+            .cm-portfolio-meta {
+                margin-top: 30px;
+
+                .cm-tag {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 10px;
+                }
+
+                .title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    font-family: var(--heading-font);
+                    color: var(--cm-heading);
+                    transition: var(--transition);
+                    &:hover{
+                        color: var(--cm-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    // project details
+
+    &-details {
+        &:not(:hover) {
+            opacity: .4;
+            transition: var(--transition);
+        }
+
+        .portfolio-content {
+            background: var(--cm-bg);
+            padding: 50px;
+            border-radius: 10px;
+            max-width: max-content;
+
+            @include mq($sm) {
+                padding: 30px;
+            } 
+            @include mq($xs) {
+                background: var(--cm-mode);
+                border: none;
+                padding: 0;
+            }
+
+            .project-thumb {
+                margin-bottom: 40px;
+
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            .project-meta {
+                display: flex;
+                gap: 50px;
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid var(--border-color-2);
+
+                @include mq($sm) {
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+
+                @include mq($xs) {
+                    gap: 20px;
+                }
+
+                .client,
+                .category,
+                .deadline {
+                    span {
+                        display: block;
+
+                        &.darker {
+                            color: var(--cm-heading);
+                        }
+
+                    }
+
+                    a.darker {
+                        color: var(--cm-heading);
+                    }
+
+                }
+            }
+
+            .project-title {
+                font-size: 52px;
+                font-weight: 500;
+                color: var(--cm-heading);
+                @include mq($md){
+                    font-size: 45px;
+                }
+            }
+
+            .project-description {}
+
+            .project-feature {
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                &__single {
+                    position: relative;
+                    margin-left: 30px;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        background-image: url(../img/icons/check.svg);
+                        height: 15px;
+                        width: 15px;
+                        left: -30px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

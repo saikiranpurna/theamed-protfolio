@@ -1,0 +1,268 @@
+
+// pricing area css
+.cm-pricing-area {
+    .section-title {
+        font-weight: 400;
+        color: var(--body-color);
+        margin-bottom: 40px;
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.cm-pricing {
+    display: flex;
+    gap: 25px;
+    @include mq($sm){
+        flex-wrap: wrap;
+    }
+}
+
+.pricing-table {
+    max-width: 420px;
+    padding: 50px 60px 50px;
+    border: 2px solid var(--border-color-2);
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    transition: var(--transition);
+    @include mq($xl){
+        padding: 50px 30px;
+    }
+    @include mq($sm){
+        max-width: 100%;
+        width: 100%;   
+    }
+    &:hover {
+        border-color: var(--cm-primary);
+
+        .plan-content {
+            border-color: var(--cm-primary);
+        }
+    }
+
+    &__single {
+        .pricing-plan {
+            margin-bottom: 40px;
+
+            .plan-name {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .plan-switcher {
+                .plan {
+                    &.active {
+                        color: var(--cm-heading);
+                    }
+                }
+            }
+        }
+
+        .plan-trial {
+            margin-bottom: 40px;
+
+            &-btn {
+                padding: 18px 42px;
+                border: 2px solid var(--cm-primary);
+                font-size: 24px;
+                font-weight: 700;
+                font-family: var(--heading-font);
+                border-radius: 10px;
+                color: var(--cm-heading);
+                transition: var(--transition);
+                @include mq($lg){
+                    padding: 18px 25px;
+                }
+                &:hover {
+                    background: var(--cm-primary);
+                    color: var(--cm-white);
+                    border-color: var(--cm-primary);
+                }
+            }
+        }
+
+        .plan-content {
+            border-bottom: 2px solid var(--border-color-2);
+            padding-bottom: 30px;
+            transition: var(--transition);
+
+            &__list {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &--item {
+                    span {
+                        font-weight: 700;
+                        color: var(--cm-heading);
+                    }
+                }
+            }
+        }
+
+        .plan-price {
+            padding-top: 50px;
+
+            .dollar {
+                font-weight: 700;
+                color: var(--cm-heading);
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 52px;
+                font-weight: 700;
+                color: var(--cm-heading);
+                line-height: 80%;
+                display: inline-block;
+                position: relative;
+                top: 8px;
+                font-family: var(--heading-font);
+            }
+
+            .billing-method {
+                color: var(--body-color);
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// testimonial section
+.cm-testimonial-area {
+    margin-top: 50px;
+    max-width: 850px;
+    .section-title {
+        font-weight: 400;
+        color: var(--body-color);
+        margin-bottom: 40px;
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.cm-testimonial {
+    max-width: max-content;
+    overflow: hidden;
+
+    &__single {
+        max-width: 420px;
+        border: 2px solid var(--border-color-2);
+        padding: 30px;
+        border-radius: 10px;
+        transition: var(--transition);
+        &:hover{
+            border-color: var(--cm-primary);
+            .description{
+                border-color: var(--cm-primary);
+            }
+        }
+        @include mq($sm){
+            max-width: 100%;
+        }
+        .author-rating {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            flex-wrap: wrap;
+            gap: 15px;
+            .name {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .designation {
+                font-size: 14px;
+            }
+
+            span {
+                color: var(--cm-primary);
+            }
+        }
+
+        .description {
+            font-size: 20px;
+            font-family: var(--heading-font);
+            line-height: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-color-2);
+            transition: var(--transition);
+            @include mq($lg){
+                font-size: 18px;
+            }
+        }
+
+        .testimonial-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-left {
+                .left-text {
+                    color: var(--cm-heading);
+
+                    span {
+                        color: var(--cm-primary);
+                    }
+                }
+
+            }
+
+            .quote {
+                span {
+                    color: var(--cm-primary);
+
+                    i {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    // swiper pagination
+    .pagination__dot {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 50px;
+
+        .swiper-pagination-bullet {
+            height: 12px;
+            width: 12px;
+            border-radius: 3px;
+            border: 1px solid rgba(102, 102, 102, 0.40);
+            background: transparent;
+            position: relative;
+            opacity: 1;
+            margin: 0;
+
+            &::before {
+                position: absolute;
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                background: rgba(102, 102, 102, 0.40);
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &-active {
+                border-color: var(--cm-primary);
+
+                &::before {
+                    background: var(--cm-primary);
+                }
+            }
+        }
+    }
+}

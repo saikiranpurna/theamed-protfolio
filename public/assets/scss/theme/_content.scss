@@ -1,0 +1,475 @@
+[data-theme=light]{
+    .cm-content-img{
+        .light-image{
+            display: block;
+        }
+        .dark-image{
+            display: none;
+        }
+    }
+}
+
+[data-theme=dark]{
+    .cm-content-img{
+        .light-image{
+            display: none;
+        }
+        .dark-image{
+            display: block;
+        }
+    }
+}
+.cm-content {
+    display: flex;
+    position: relative;
+
+    @include mq($md) {
+        flex-direction: column;
+    }
+
+    @include mq($lg) {
+        margin: 15px;
+    }
+
+    @include mq($md) {
+        margin: 0;
+    }
+}
+
+.cm-axz-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    min-width: 1075px;
+    flex-basis: 60%;
+    @include mq($lg) {
+        min-width: 640px;
+    }
+
+    @include mq($xl) {
+        min-width: 600px;
+        max-width: 100%;
+    }
+
+    @include mq($xxl) {
+        min-width: 850px;
+    }
+
+    @include mq($md) {
+        margin: 0 auto;
+        flex-basis: unset;
+    }
+
+    @include mq($sm) {
+        min-width: 100%;
+    }
+}
+
+.cm-content-area {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 50px;
+        height: 85px;
+        width: 30px;
+        background: var(--cm-primary);
+        z-index: 9;
+
+        @include mq($xs) {
+            width: 15px;
+        }
+
+        @include mq($lg) {
+            width: 20px;
+        }
+    }
+
+    .top-right-bg {
+        position: absolute;
+        right: 80px;
+        top: 50px;
+
+        @include mq($xs) {
+            right: 65px;
+            top: 30px;
+        }
+
+        &::before {
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            border-radius: 5px;
+            content: '';
+            background: var(--cm-primary);
+            z-index: 1;
+        }
+
+        &::after {
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            border-radius: 5px;
+            content: '';
+            left: 10px;
+            top: 10px;
+            background: #EBEBEB;
+        }
+    }
+}
+
+.cm-content-item__top {
+    @include mq($lg) {
+        margin-bottom: 50px;
+    }
+}
+
+// content box area
+.cm-content-box .index {
+    .main-title {
+        font-size: 80px;
+        font-weight: 500;
+        max-width: 800px;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        span {
+            color: var(--cm-primary);
+        }
+        @include mq($lg) {
+            font-size: 56px;
+        }
+        @include mq($xl) {
+            font-size: 50px;
+            max-width: 450px;
+        }
+        @include mq($xxl) {
+            font-size: 60px;
+        }
+
+        @include mq($md) {
+            font-size: 50px;
+        }
+
+        @media screen and (max-width:440px) {
+            font-size: 35px;
+            line-height: 42px;
+        }
+    }
+}
+
+
+.cm-content-box {
+    padding: 115px 110px 105px 105px;
+    position: relative;
+    max-width: 100%;
+    flex-basis: 60%;
+
+    @include mq($lg) {
+        max-width: 100%;
+    }
+
+    @include mq($xl) {
+        padding: 60px;
+    }
+
+    @include mq($md) {
+        width: 100vh;
+        max-width: 760px;
+    }
+    @media screen and (max-width:912px) {
+        min-width: 100%;
+    }
+
+    @include mq($sm) {
+        width: 100%;
+        padding: 50px;
+    }
+
+    @include mq($xs) {
+        min-width: 100%;
+        padding: 50px 30px;
+    }
+
+    .cm-content-circle {
+        position: absolute;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        border: 1px solid var(--circle-border);
+        right: 60px;
+        top: 120px;
+        background: var(--circle-bg);
+        @include mq($lg) {
+            display:none;
+        }
+
+        @include mq($xl) {
+            right: 30px;
+        }
+
+        @include mq($md) {
+            display: none;
+        }
+
+        svg.circle {
+            animation: rotate 10s linear infinite;
+         textPath{
+                fill: var(--body-color);
+                text-transform: uppercase;
+                font-size: 10px;
+            }
+        }
+
+        .circle-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 75px;
+            width: 75px;
+            border: 1px solid var(--circle-border);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--cm-mode);
+        }
+    }
+
+    .cm-content-sub {
+        margin-bottom: 10px;
+        .icon svg g path[fill] {
+            fill: var(--cm-primary);
+        }
+
+        .icon svg path[stroke] {
+            stroke: var(--cm-primary);
+        }
+        .icon svg path[fill] {
+            fill: var(--cm-primary);
+        }
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .cm-contact-zone {
+        margin-bottom: 45px;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        flex-wrap: wrap;
+
+        @include mq($xl) {
+            gap: 30px;
+        }
+
+        @include mq($xs) {
+            gap: 20px;
+        }
+
+        a {
+
+            display: flex;
+            gap: 15px;
+            font-size: 24px;
+
+            @include mq($sm) {
+                font-size: 20px;
+            }
+
+            span {
+                i {
+                    color: var(--cm-primary);
+                }
+            }
+        }
+    }
+
+    .cm-content-img {
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+    }
+    
+
+    .cm-counter {
+        margin-top: 110px;
+        display: flex;
+        align-items: center;
+        gap: 150px;
+
+        @include mq($lg) {
+            gap: 100px;
+        }
+
+        @include mq($sm) {
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        &-single {
+            max-width: 170px;
+
+            .count-item {
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                display: block;
+                color: var(--cm-heading);
+                font-family: var(--heading-font);
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--cm-primary);
+                }
+            }
+        }
+    }
+}
+
+// cm pagination
+[data-theme=dark]{
+    .page-link:hover{
+        color: var(--cm-heading) !important;
+    }
+}
+.cm-site-pagination {
+    margin-top: 60px;
+    .pagination {
+        justify-content: center;
+        gap: 15px;
+        display: flex;
+        .page-item {
+            .page-link {
+                border-radius: 10px;
+                background: var(--cm-bg);
+                border: 2px solid var(--cm-border);
+                height: 50px;
+                width: 50px;
+                display: grid;
+                place-items: center;
+                font-size: 16px;
+                color: var(--body-color);
+                transition: var(--transition);
+
+                &:hover {
+                    background: var(--cm-primary);
+                    color: var(--cm-white);
+                    border-color: var(--cm-primary);
+                }
+            }
+        }
+    }
+}
+
+// cm tab item
+.cm-tab-item {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .tab-action-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: max-content;
+        padding: 30px 0;
+        margin-bottom: 50px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+        
+                a[data-title] {
+                    position: relative;
+        
+                    &::after {
+                        content: attr(data-title);
+                        position: absolute;
+                        background-color: var(--cm-primary);
+                        color: #fff;
+                        padding: 5px 10px;
+                        border-radius: 2px;
+                        font-size: 12px;
+                        white-space: nowrap;
+                        visibility: hidden;
+                        opacity: 0;
+                        right: 25px;
+                        transition: opacity 0.3s ease;
+                    }
+        
+                    &:hover::after {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .link svg path {
+                    transition: var(--transition);
+                }
+                .link:hover, .active{
+                    svg path[stroke]{
+                        stroke: var(--cm-primary);
+                    }
+                    svg path[fill]{
+                        fill: var(--cm-primary);
+                    }
+                }
+                .link svg g path {
+                    transition: var(--transition);
+                }
+                .link:hover, .active{
+                    svg g path[fill]{
+                        fill: var(--cm-primary);
+                    }
+                }
+        
+            }
+        }
+    }
+    .cm-social-link-text {
+        transform: rotate(-180deg);
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 40px;
+
+                @include mq($xl) {
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    writing-mode: tb;
+                    transition: var(--transition);
+
+                    &:hover {
+                        color: var(--cm-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+

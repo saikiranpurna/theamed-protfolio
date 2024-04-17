@@ -1,0 +1,46 @@
+// all site btn
+[data-theme=dark]{
+    .cm-btn{
+        &.primary{
+            color: var(--cm-heading);
+        }
+        &:hover{
+            color: var(--cm-heading);
+        }
+    }
+}
+.cm-btn{
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--body-color);
+    padding: 15px 35px;
+    background: var(--cm-transparent);
+    display: flex;
+    font-family: var(--heading-font);
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--btn-border);
+    z-index: 1;
+    font-size: 20px;
+    transition: var(--transition);
+    &.primary{
+        background: var(--cm-primary);
+        color: var(--cm-white);
+        
+        border-color: var(--cm-primary);
+        &:hover{
+            border-color: var(--cm-transparent);
+        }
+    }
+    transition: var(--transition);
+    &:hover{
+        color: var(--cm-white);
+        background: var(--cm-primary);
+        border-color: var(--cm-primary);
+    }
+}

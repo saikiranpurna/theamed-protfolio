@@ -1,0 +1,44 @@
+// footer credit
+.cm-footer {
+    &-content {
+        padding: 0 30px;
+        height: 85px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        p {
+            margin-bottom: 0;
+            a{
+                color: var(--cm-primary);
+            }
+        }
+        a{
+            svg path{
+                stroke: var(--body-color);
+                transition: var(--transition);
+            }
+            &:hover{
+                svg path{
+                    stroke: var(--cm-primary);
+                }
+            }
+        }
+    }
+    .cm-language-switcher {
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85px;
+        border-radius: 20px;
+
+        .nice-select {
+            border: none;
+
+            .list {
+                top: -200%;
+            }
+        }
+    }
+}

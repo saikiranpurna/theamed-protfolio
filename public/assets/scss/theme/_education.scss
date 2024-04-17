@@ -1,0 +1,148 @@
+// deucation css
+.cm-education {
+    .main-title {
+        font-size: 52px;
+        font-weight: 400;
+
+        u {
+            display: block;
+        }
+    }
+
+    &-education {
+        .single-info-item {
+            h3 {
+                font-weight: 400;
+                color: var(--body-color);
+                margin-bottom: 40px;
+                display: block;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+        }
+
+        .education-timeline {
+            display: flex;
+            gap: 110px;
+            position: relative;
+            @include mq($md){
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            &:not(:last-child) {
+                padding-bottom: 40px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 5px;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background: var(--cm-primary);
+                z-index: 1;
+                @include mq($md){
+                    display: none;
+                }
+                
+            }
+
+            &::after {
+                position: absolute;
+                left: 4px;
+                height: 100%;
+                width: 2px;
+                top: 5px;
+                content: '';
+                background: var(--edu-border);
+                @include mq($md){
+                    display: none;
+                }
+            }
+
+            .left-side {
+                width: 30%;
+                position: relative;
+                margin-left: 30px;
+                @include mq($md){
+                    width: 50%;
+                    margin-left: 0;
+                }
+                @include mq($lg){
+                    width: 45%;
+                }
+                @include mq($xs){
+                    width: 100%;
+                }
+                h6 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .right-side {
+                max-width: 510px;
+
+                h6 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .cm-skill-container{
+            display: flex;
+            gap: 30px;
+            @include mq($md){
+                flex-wrap: wrap;
+            }
+        }
+        .single-skill-item {
+            width: 50%;
+            @include mq($md){
+                width: 100%;
+            }
+            .expertise__single {
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            .expertise__title {
+                font-weight: 700;
+                font-family: var(--cm-heading);
+                color: var(--cm-heading);
+                text-transform: capitalize;
+            }
+
+            .progress {
+                position: relative;
+                border-radius: 0;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 20px;
+                    width: 100%;
+                    background: var(--progress);
+                }
+
+                .progress-bar {
+                    height: 5px;
+                    border-radius: 0;
+                    background: var(--cm-primary);
+                    z-index: 9;
+                    position: relative;
+                    width: 0;
+                    transition: width 1s ease-in-out;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+// about css
+.cm-about {
+    .main-title {
+        font-size: 52px;
+        font-weight: 400;
+        max-width: 770px;
+        u {
+            text-decoration: none;
+        }
+    }
+
+    &-brief {
+        margin-top: 30px;
+        display: flex;
+        gap: 30px;
+        @include mq($sm){
+            flex-wrap: wrap;
+        }
+        .cm-about-left {
+            max-width: 310px;
+            @include mq($sm){
+                max-width: 100%;
+            }
+        }
+
+        .cm-about-right {
+            max-width: 530px;
+        }
+
+        .cm-margin {
+            margin-top: 30px;
+        }
+
+        .cm-rating {
+            margin-top: 50px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            .star-icon {
+                height: 50px;
+                min-width: 50px;
+                background: var(--cm-primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: var(--cm-heading);
+                font-size: 20px;
+            }
+
+            .cm-rating-count {
+                h4 {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: var(--cm-primary);
+                }
+            }
+        }
+    }
+
+    &-info {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 500px;
+        @include mq($xs){
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .about-info {
+                max-width: 220px;
+
+                .name {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &-client {
+        margin-top: 110px;
+        @include mq($sm){
+            margin-top: 80px;
+        }
+        max-width: 850px;
+        .client-brand {
+            overflow: hidden;
+            max-width: max-content;
+            .single-project {
+                height: 260px;
+                width: 260px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--cm-border);
+                @include mq($xl){
+                    height: 200px;
+                    width: 200px;
+                } 
+                @include mq($xxl){
+                    height: 220px;
+                    width: 220px;
+                }
+                transition: var(--transition);
+                &:hover{
+                    border-color: var(--cm-primary);
+                }
+            }
+        }
+    }
+}

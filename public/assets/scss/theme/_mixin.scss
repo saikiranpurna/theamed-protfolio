@@ -1,0 +1,40 @@
+@mixin shadow($x: 0, $y: 0, $blur: 5px, $color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: $x $y $blur $color;
+}
+
+// for text gradient generator
+@mixin text-gradient($start-color, $end-color) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, $start-color, $end-color);
+}
+// for css prefix
+@mixin animation($property, $values...) {
+    @each $value in $values {
+      -webkit-#{$property}: $value;
+      -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+      -o-#{$property}: $value;
+      #{$property}: $value;
+    }
+}
+@mixin ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}  
+// responsive breakpoint
+$xxl: "screen and (min-width: 1400px) and (max-width: 1600px)";
+$xl: "screen and (max-width: 1400px)";
+$lg: "screen and (max-width: 1200px)";
+$md: "screen and (max-width: 992px)";
+$sm: "screen and (max-width: 768px)";
+$xs: "screen and (max-width: 576px)";
+
+@mixin mq($query) {
+  @media #{$query} {
+    @content;
+  }
+}
