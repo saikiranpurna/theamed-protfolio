@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Author = () => {
   return (
@@ -13,13 +14,13 @@ const Author = () => {
         </div>
         <div className="cm-author-info">
           <h3 className="cm-author-name">Purna Saikiran</h3>
-          <span className="cm-author-designation">Web Design & Developer</span>
+          <span className="cm-author-designation">Frontend Developer</span>
         </div>
         <div className="cm-author-hiring">
           <a href="/contact" className="cm-btn primary">
             Hire Me!
           </a>
-          <a href="#" className="cm-btn">
+          <a href="/Purna_Saikiran_Resume.pdf" className="cm-btn" download>
             Download CV
           </a>
         </div>
@@ -30,7 +31,11 @@ const Author = () => {
           </p>
         </div>
         <div className="cm-author-social-links">
-          <a href="#" className="social-links">
+          <a
+            href="https://www.facebook.com/om.saikiran"
+            target="_blank"
+            className="social-links"
+          >
             <img
               src="assets/img/icons/facebook.svg"
               alt="facebook"
@@ -39,7 +44,11 @@ const Author = () => {
               className="svg"
             />
           </a>
-          <a href="#" className="social-links">
+          <a
+            href="https://twitter.com/purna_saik30757"
+            target="_blank"
+            className="social-links"
+          >
             <img
               src="assets/img/icons/twitter.svg"
               alt="twitter-x"
@@ -48,7 +57,11 @@ const Author = () => {
               className="svg"
             />
           </a>
-          <a href="#" className="social-links">
+          <a
+            href="https://www.instagram.com/purna_saikiran/"
+            target="_blank"
+            className="social-links"
+          >
             <img
               src="assets/img/icons/instagram.svg"
               alt="instagram"
@@ -57,7 +70,11 @@ const Author = () => {
               className="svg"
             />
           </a>
-          <a href="#" className="social-links">
+          <a
+            href="https://www.linkedin.com/in/purna-saikiran"
+            target="_blank"
+            className="social-links"
+          >
             <img
               src="assets/img/icons/linkedin.svg"
               alt="linkedin"

@@ -2,7 +2,6 @@
       $(document).ready(function () {
         var rts_light = $('.mode-switcher');
         if (rts_light.length) {
-          console.log('?????????????????')
           var toggle = $('#theme-mode, #theme-mode-2');
           var storedTheme = localStorage.getItem('axz-portfolio') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
           if (storedTheme) {

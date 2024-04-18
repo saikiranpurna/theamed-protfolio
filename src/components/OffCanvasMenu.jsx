@@ -1,6 +1,10 @@
 import React from "react";
+import { CURRENT_TAB } from "../common/constants";
 
 const OffCanvasMenu = () => {
+  const handleStore = (path = "/") => {
+    sessionStorage.setItem(CURRENT_TAB, path);
+  };
   return (
     <>
       {/* // <!-- offcanvase menu --> */}
@@ -26,7 +30,7 @@ const OffCanvasMenu = () => {
             <div className="cm-menu">
               <ul>
                 <li>
-                  <a className="link" href="/">
+                  <a className="link" href="/" onClick={() => handleStore("/")}>
                     <img
                       className="svg"
                       src="assets/img/icons/home.svg"
@@ -36,7 +40,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="about">
+                  <a
+                    className="link"
+                    href="/about"
+                    onClick={() => handleStore("/about")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/about.svg"
@@ -46,7 +54,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/service">
+                  <a
+                    className="link"
+                    href="/service"
+                    onClick={() => handleStore("/service")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/service.svg"
@@ -56,7 +68,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/portfolio">
+                  <a
+                    className="link"
+                    href="/portfolio"
+                    onClick={() => handleStore("/portfolio")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/portfolio.svg"
@@ -66,7 +82,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/pricing">
+                  <a
+                    className="link"
+                    href="/pricing"
+                    onClick={() => handleStore("/pricing")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/pricing.svg"
@@ -76,7 +96,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/education">
+                  <a
+                    className="link"
+                    href="/education"
+                    onClick={() => handleStore("/education")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/education.svg"
@@ -86,7 +110,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/blog">
+                  <a
+                    className="link"
+                    href="/blog"
+                    onClick={() => handleStore("/blog")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/blog.svg"
@@ -96,7 +124,11 @@ const OffCanvasMenu = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="link" href="/contact">
+                  <a
+                    className="link"
+                    href="/contact"
+                    onClick={() => handleStore("/contact")}
+                  >
                     <img
                       className="svg"
                       src="assets/img/icons/contact.svg"
@@ -110,8 +142,8 @@ const OffCanvasMenu = () => {
           </div>
           <div className="cm-sidecontact">
             <h6>Contact Me</h6>
-            <a href="#">+8801712345678</a>
-            <a href="#">axz@axz.com</a>
+            <a href="#">+91 9491279543</a>
+            <a href="#">saikiransai949@gmail.com</a>
           </div>
         </div>
       </div>
