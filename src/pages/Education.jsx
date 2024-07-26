@@ -1,9 +1,7 @@
 import React from "react";
+import ContentCircle from "../components/ContentCircle";
 
 const Education = () => {
-  let textPath = `<textPath xlink:href="#circle">
-    Purna Sai Web Design and Development
-  </textPath>`;
   return (
     <>
       {/* <!-- content section --> */}
@@ -16,28 +14,8 @@ const Education = () => {
           <div className="cm-content-item cm-page-template">
             <div className="cm-content-item__top">
               <div className="top-right-bg"></div>
-              <div className="cm-content-circle">
-                <svg
-                  className="circle"
-                  viewBox="0 0 100 100"
-                  width="120"
-                  height="120"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    ></path>
-                  </defs>
-                  <text
-                    fontSize="8.75"
-                    dangerouslySetInnerHTML={{ __html: textPath }}
-                  ></text>
-                </svg>
-                <div className="circle-logo">
-                  <img src="assets/img/logo/circle-logo.svg" alt="" />
-                </div>
-              </div>
+              <ContentCircle />
+
               <div className="cm-content-sub">
                 <div className="icon">
                   <img
@@ -107,8 +85,9 @@ const Education = () => {
                     <div className="right-side">
                       <h6 className="degree">Senior Frontend-developer</h6>
                       <p>
-                        Phasellus eros lectus, ultricies ut nisl in, sodales
-                        rhoncusem. Maecenas molestie design maturity srrategy.
+                        Delivering High-Quality, Responsive, and Accessible
+                        Interfaces and Solving Complex Problems with Elegant
+                        Solutions
                       </p>
                     </div>
                   </div>
@@ -120,8 +99,9 @@ const Education = () => {
                     <div className="right-side">
                       <h6 className="degree">Web Development</h6>
                       <p>
-                        Phasellus eros lectus, ultricies ut nisl in, sodales
-                        rhoncusem. Maecenas molestie design maturity srrategy.
+                        Passionate about Creating Engaging and User-Friendly
+                        Interfaces and Skilled in Modern Frontend Technologies
+                        and Best Practices
                       </p>
                     </div>
                   </div>
@@ -133,8 +113,8 @@ const Education = () => {
                     <div className="right-side">
                       <h6 className="degree">Associate Software Engineer</h6>
                       <p>
-                        Phasellus eros lectus, ultricies ut nisl in, sodales
-                        rhoncusem. Maecenas molestie design maturity srrategy.
+                        Driving Business Success through Technical Expertise and
+                        Building Fast, Scalable, and Secure Web Applications
                       </p>
                     </div>
                   </div>
@@ -163,7 +143,7 @@ const Education = () => {
                       </div>
                       <div className="expertise__single">
                         <p className="expertise__title">
-                          art direction - <span>89%</span>
+                          Database Management- <span>89%</span>
                         </p>
                         <div className="progress">
                           <div
@@ -178,7 +158,7 @@ const Education = () => {
                       </div>
                       <div className="expertise__single">
                         <p className="expertise__title">
-                          branding - <span>60%</span>
+                          Backend Development - <span>60%</span>
                         </p>
                         <div className="progress">
                           <div
@@ -195,14 +175,14 @@ const Education = () => {
                     <div className="single-skill-item cm-md-5">
                       <div className="expertise__single">
                         <p className="expertise__title">
-                          Website Design - <span>40%</span>
+                          Performance Optimization (SEO) - <span>90%</span>
                         </p>
                         <div className="progress">
                           <div
                             className="progress-bar"
                             role="progressbar"
-                            style={{ width: "40%" }}
-                            aria-valuenow="40"
+                            style={{ width: "90%" }}
+                            aria-valuenow="90"
                             aria-valuemin="0"
                             aria-valuemax="100"
                           ></div>

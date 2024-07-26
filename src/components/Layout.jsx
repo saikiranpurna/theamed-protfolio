@@ -9,11 +9,14 @@ import OffCanvasMenu from "./OffCanvasMenu";
 const Layout = (props) => {
   const { children } = props;
   const [show, setShow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   useEffect(() => {
+    setShow(false);
     setTimeout(() => {
       setShow(true);
-    }, 3000);
-  }, []);
+    }, 2000);
+  }, [children]);
+
   return (
     <div data-barba="wrapper">
       <div className="cm-content">
@@ -36,19 +39,18 @@ const Layout = (props) => {
               </>
             ) : (
               <div className="loader-container">
-
                 <span className="loader"></span>
               </div>
             )}
           </div>
           {/* <!-- main content end --> */}
           {/* siteNavigation */}
-          <SiteNavigation />
+          <SiteNavigation showMenu={showMenu} setShowMenu={setShowMenu} />
         </div>
       </div>
 
       {/* offCanvasMenu */}
-      <OffCanvasMenu />
+      <OffCanvasMenu showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   );
 };

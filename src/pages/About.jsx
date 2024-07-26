@@ -1,9 +1,39 @@
 import React from "react";
-
+import ContentCircle from "../components/ContentCircle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay} from 'swiper/modules';
 const About = () => {
-  let textPath = `<textPath xlink:href="#circle">
-    Purna Sai Web Design and Development
-  </textPath>`;
+  const SliderData = [
+    {
+      url: "assets/img/lib/react.png",
+      title: "react",
+    },
+    {
+      url: "assets/img/lib/html.png",
+      title: "html5",
+    },
+    {
+      url: "assets/img/lib/css.png",
+      title: "css3",
+    },
+    {
+      url: "assets/img/lib/js.png",
+      title: "javascript",
+    },
+    {
+      url: "assets/img/lib/next.png",
+      title: "next",
+    },
+    {
+      url: "assets/img/lib/redux.png",
+      title: "redux",
+    },
+    {
+      url: "assets/img/lib/node.png",
+      title: "node",
+    },
+  ];
   return (
     <>
       {/* <!-- content section --> */}
@@ -16,25 +46,7 @@ const About = () => {
           <div className="cm-content-item cm-page-template">
             <div className="cm-content-item__top">
               <div className="top-right-bg"></div>
-              <div className="cm-content-circle">
-                <svg
-                  className="circle"
-                  viewBox="0 0 100 100"
-                  width="120"
-                  height="120"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    ></path>
-                  </defs>
-                  <text dangerouslySetInnerHTML={{ __html: textPath }}></text>
-                </svg>
-                <div className="circle-logo">
-                  <img src="assets/img/logo/circle-logo.svg" alt="" />
-                </div>
-              </div>
+              <ContentCircle />
               <div className="cm-content-sub">
                 <div className="icon">
                   <img
@@ -46,9 +58,9 @@ const About = () => {
                 <p>Me! About</p>
               </div>
               <h1 className="main-title">
-                Hire the best Web Developer in{" "}
-                <span>INDIA.</span>
-                <br/>
+                <span>MERN</span> Stack Expert & <span>Full-Stack</span>{" "}
+                Developer
+                <br />
                 <u className="cm-inline">
                   <img src="assets/img/content/line.svg" alt="" />
                 </u>
@@ -58,9 +70,9 @@ const About = () => {
             <div className="cm-about-brief">
               <div className="cm-about-left">
                 <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but majority have suffered alteration in some form,
-                  by injected humour.
+                  As a highly skilled MERN Stack developer, I, Purna Saikiran,
+                  bring a passion for building scalable, efficient, and dynamic
+                  web applications to the table.
                 </p>
                 <div className="cm-rating">
                   <div className="star-icon">
@@ -81,16 +93,22 @@ const About = () => {
               </div>
               <div className="cm-about-right">
                 <p>
-                  Randomised words which don't look even slightly belie vable.
-                  If you are going to use a passage of Lorem Ipsu you need to be
-                  sure there isn't anything embarr assing hidden in the middle
-                  of text All the Lorem Ipsum.
+                  With a strong foundation in MongoDB, Express.js, React.js, and
+                  Node.js, I excel at crafting seamless user experiences that
+                  meet the needs of clients and organizations alike. My
+                  expertise in JavaScript and its ecosystem enables me to tackle
+                  complex projects with ease, and my dedication to staying
+                  up-to-date with the latest industry trends ensures that my
+                  skills are always in demand.
                 </p>
                 <p className="cm-margin">
-                  Generators on the Internet tend to repeat predefined chunks as
-                  necessary, making this the first true generator on the
-                  Internet. Lorem Ipsu you need to be sure there isn't anything
-                  embarr.
+                  I work closely with clients to understand their needs and
+                  goals, and I am committed to providing transparent and regular
+                  updates throughout the development process. Whether it's
+                  working with designers to craft a seamless user experience or
+                  collaborating with back-end developers to integrate APIs, I am
+                  a team player who is dedicated to delivering high-quality
+                  solutions that meet the needs of all stakeholders.
                 </p>
               </div>
             </div>
@@ -122,28 +140,27 @@ const About = () => {
             {/* <!-- client --> */}
             <div className="cm-about-client">
               <div className="client-brand project-slider">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <div className="single-project">
-                      <img src="assets/img/client/1.png" alt="" />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="single-project">
-                      <img src="assets/img/client/02.png" alt="" />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="single-project">
-                      <img src="assets/img/client/1.png" alt="" />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="single-project">
-                      <img src="assets/img/client/1.png" alt="" />
-                    </div>
-                  </div>
-                </div>
+                <Swiper
+                  spaceBetween={40}
+                  slidesPerView={3}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  modules={[Autoplay]}
+                  // onSlideChange={() => console.log("slide change")}
+                  // onSwiper={(swiper) => console.log(swiper)}
+                >
+                  {SliderData.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      {" "}
+                      <div className="single-project">
+                        <img src={item.url} alt={item.title} />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
             {/* <!-- client end --> */}

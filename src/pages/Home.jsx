@@ -1,9 +1,8 @@
 import React from "react";
+import ContentCircle from "../components/ContentCircle";
 
 const Home = () => {
-  let textPath = `<textPath xlink:href="#circle">
-    Purna Sai Web Design and Development
-  </textPath>`;
+
   return (
     //    {/* <!-- main content section --> */}
     <div
@@ -14,29 +13,8 @@ const Home = () => {
       <div className="cm-content-box mode">
         <div className="cm-content-item index">
           <div className="top-right-bg"></div>
-          <div className="cm-content-circle">
-            <svg
-              className="circle"
-              viewBox="0 0 100 100"
-              width="120"
-              height="120"
-            >
-              <defs>
-                <path
-                  id="circle"
-                  d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                ></path>
-              </defs>
-              <text dangerouslySetInnerHTML={{ __html: textPath }}>
-                {/* <textPath xlink:href="#circle">
-                           Purna Sai Web Design and Development
-                         </textPath> */}
-              </text>
-            </svg>
-            <div className="circle-logo">
-              <img src="assets/img/logo/circle-logo.svg" alt="" />
-            </div>
-          </div>
+          <ContentCircle/>
+
           <div className="cm-content-sub">
             <div className="icon">
               <img className="svg" src="assets/img/icons/home.svg" alt="" />
@@ -44,7 +22,7 @@ const Home = () => {
             <p>Hi! There I’m</p>
           </div>
           <h1 className="main-title">
-            I'm making product and <span>design</span> minimal modern.
+            I'm make <span>functional product's</span> which also delights users.
           </h1>
           <div className="cm-contact-zone">
             <a href="mailto:saikiransai949@gmail.com">

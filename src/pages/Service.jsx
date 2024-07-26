@@ -1,9 +1,8 @@
 import React from "react";
+import ContentCircle from "../components/ContentCircle";
 
 const Service = () => {
-  let textPath = `<textPath xlink:href="#circle">
-    Purna Sai Web Design and Development
-  </textPath>`;
+
   return (
     <>
       {/* <!-- content section --> */}
@@ -16,25 +15,8 @@ const Service = () => {
           <div className="cm-content-item cm-page-template">
             <div className="cm-content-item__top">
               <div className="top-right-bg"></div>
-              <div className="cm-content-circle">
-                <svg
-                  className="circle"
-                  viewBox="0 0 100 100"
-                  width="120"
-                  height="120"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    ></path>
-                  </defs>
-                  <text dangerouslySetInnerHTML={{ __html: textPath }}></text>
-                </svg>
-                <div className="circle-logo">
-                  <img src="assets/img/logo/circle-logo.svg" alt="" />
-                </div>
-              </div>
+              <ContentCircle/>
+
               <div className="cm-content-sub">
                 <div className="icon">
                   <img src="assets/img/icons/service.svg" alt="" className="svg" />
@@ -42,7 +24,7 @@ const Service = () => {
                 <p>Best Our Service</p>
               </div>
               <h1 className="main-title">
-                Jeckob Martin the best <br />I make <span>Services.</span>
+                Purna Sai the best <br />I make <span>Services.</span>
                 <u className="cm-block">
                   <img src="assets/img/content/line.svg" alt="" />
                 </u>
@@ -57,21 +39,21 @@ const Service = () => {
                   </div>
                   <div className="service-count">
                     <h6 className="service-title">
-                      Brand Strategy & Art Direction
+                    Frontend Performance Optimization Services
                     </h6>
-                    <p className="project-count">(35+ Project)</p>
+                    <p className="project-count">(Optimize web application performance using various techniques.)</p>
                   </div>
                 </div>
                 <div className="service-list">
                   <ul>
                     <li>
-                      <a href="#">UI/UX Design</a>
+                      <a href="#">Caching</a>
                     </li>
                     <li>
-                      <a href="#">Research</a>
+                      <a href="#">Minification</a>
                     </li>
                     <li>
-                      <a href="#">Mobile & Web App</a>
+                      <a href="#">Compression</a>
                     </li>
                   </ul>
                 </div>
@@ -84,21 +66,21 @@ const Service = () => {
                   </div>
                   <div className="service-count">
                     <h6 className="service-title">
-                      Motion Graphics & Interactions
+                    Frontend Development Services
                     </h6>
-                    <p className="project-count">(100+ Project)</p>
+                    <p className="project-count">(Create user-friendly and responsive user interfaces )</p>
                   </div>
                 </div>
                 <div className="service-list">
                   <ul>
                     <li>
-                      <a href="#">UI/UX Design</a>
+                      <a href="#">React JS</a>
                     </li>
                     <li>
-                      <a href="#">Research</a>
+                      <a href="#">Next JS</a>
                     </li>
                     <li>
-                      <a href="#">Mobile & Web App</a>
+                      <a href="#">JavaScript</a>
                     </li>
                   </ul>
                 </div>
@@ -110,20 +92,23 @@ const Service = () => {
                     <img src="assets/img/icons/service-3.svg" alt="" />
                   </div>
                   <div className="service-count">
-                    <h6 className="service-title">Webflow Development</h6>
-                    <p className="project-count">(55+ Project)</p>
+                    <h6 className="service-title">Web Component Services</h6>
+                    <p className="project-count">(Develop custom web components using Web Component standards)</p>
                   </div>
                 </div>
                 <div className="service-list">
-                  <ul>
+                <ul>
                     <li>
-                      <a href="#">UI/UX Design</a>
+                      <a href="#">React JS</a>
                     </li>
                     <li>
-                      <a href="#">Research</a>
+                      <a href="#">HTML5</a>
                     </li>
                     <li>
-                      <a href="#">Mobile & Web App</a>
+                      <a href="#">CSS3</a>
+                    </li>
+                    <li>
+                      <a href="#">JavaScript</a>
                     </li>
                   </ul>
                 </div>
@@ -136,21 +121,18 @@ const Service = () => {
                   </div>
                   <div className="service-count">
                     <h6 className="service-title">
-                      UX/UI Design & Website/App Design
+                    Frontend Testing and Debugging Services
                     </h6>
-                    <p className="project-count">(59+ Project)</p>
+                    <p className="project-count">(Write end-to-end tests to ensure that the application works as expected from a user's perspective.)</p>
                   </div>
                 </div>
                 <div className="service-list">
                   <ul>
                     <li>
-                      <a href="#">UI/UX Design</a>
+                      <a href="#">Jest</a>
                     </li>
                     <li>
-                      <a href="#">Research</a>
-                    </li>
-                    <li>
-                      <a href="#">Mobile & Web App</a>
+                      <a href="#">Jasmine</a>
                     </li>
                   </ul>
                 </div>

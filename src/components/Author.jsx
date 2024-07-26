@@ -14,20 +14,20 @@ const Author = () => {
         </div>
         <div className="cm-author-info">
           <h3 className="cm-author-name">Purna Saikiran</h3>
-          <span className="cm-author-designation">Frontend Developer</span>
+          <span className="cm-author-designation">Fullstack Developer</span>
         </div>
         <div className="cm-author-hiring">
-          <a href="/contact" className="cm-btn primary">
+          <Link to="/contact" className="cm-btn primary">
             Hire Me!
-          </a>
+          </Link>
           <a href="/Purna_Saikiran_Resume.pdf" className="cm-btn" download>
             Download CV
           </a>
         </div>
         <div className="cm-author-description">
           <p>
-            Specializing in strategy, improving design maturity & design
-            systems.
+            Combining functionality and aesthetics through efficient development
+            frameworks with a touch of my magic!
           </p>
         </div>
         <div className="cm-author-social-links">

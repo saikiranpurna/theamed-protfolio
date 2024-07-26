@@ -1,4 +1,5 @@
 import React from "react";
+import ContentCircle from "../components/ContentCircle";
 
 const Blog = () => {
   let textPath = `<textPath xlink:href="#circle">
@@ -16,25 +17,7 @@ const Blog = () => {
           <div className="cm-content-item cm-page-template">
             <div className="cm-content-item__top">
               <div className="top-right-bg"></div>
-              <div className="cm-content-circle">
-                <svg
-                  className="circle"
-                  viewBox="0 0 100 100"
-                  width="120"
-                  height="120"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    ></path>
-                  </defs>
-                  <text dangerouslySetInnerHTML={{ __html: textPath }}></text>
-                </svg>
-                <div className="circle-logo">
-                  <img src="assets/img/logo/circle-logo.svg" alt="" />
-                </div>
-              </div>
+              <ContentCircle/>
               <div className="cm-content-sub">
                 <div className="icon">
                   <img className="svg" src="assets/img/icons/blog.svg" alt="blog" />

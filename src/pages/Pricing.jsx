@@ -1,9 +1,7 @@
 import React from "react";
+import ContentCircle from "../components/ContentCircle";
 
 const Pricing = () => {
-    let textPath = `<textPath xlink:href="#circle">
-    Purna Sai Web Design and Development
-  </textPath>`;
   return (
     <>
       {/* <!-- content section --> */}
@@ -16,29 +14,15 @@ const Pricing = () => {
           <div className="cm-content-item cm-page-template">
             <div className="cm-content-item__top">
               <div className="top-right-bg"></div>
-              <div className="cm-content-circle">
-                <svg
-                  className="circle"
-                  viewBox="0 0 100 100"
-                  width="120"
-                  height="120"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    ></path>
-                  </defs>
-                  <text dangerouslySetInnerHTML={{__html:textPath}}>
-                  </text>
-                </svg>
-                <div className="circle-logo">
-                  <img src="assets/img/logo/circle-logo.svg" alt="" />
-                </div>
-              </div>
+              <ContentCircle />
+
               <div className="cm-content-sub">
                 <div className="icon">
-                  <img className="svg" src="assets/img/icons/pricing.svg" alt="" />
+                  <img
+                    className="svg"
+                    src="assets/img/icons/pricing.svg"
+                    alt=""
+                  />
                 </div>
                 <p>Best Our Pricing</p>
               </div>
@@ -153,65 +137,15 @@ const Pricing = () => {
               <div className="cm-testimonials">
                 <div className="cm-testimonial">
                   <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="cm-testimonial__single">
-                        <div className="author-rating">
-                          <div className="author">
-                            <h5 className="name">N. Henry Lucas</h5>
-                            <p className="designation">
-                              Web Designer of <span>Creativemela</span>
-                            </p>
-                          </div>
-                          <div className="rating">
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                          </div>
-                        </div>
-                        <p className="description">
-                          Nam ultricies sed leo eget vehi. magna quistoli mats.
-                          Inter temps semper our has been lecto. Nam ultricies
-                          sed leo eget vehi. Sed magna mats.
-                        </p>
-                        <div className="testimonial-footer">
-                          <div className="footer-left">
-                            <p className="left-text">
-                              Explosive Revenue <br />
-                              Growth <span>12.5k</span>
-                            </p>
-                          </div>
-                          <div className="quote">
-                            <span>
-                              <img
-                                src="assets/img/icons/quote.svg"
-                                className="svg"
-                                alt=""
-                              />
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                     {/* <!-- single slider --> */}
                     <div className="swiper-slide">
                       <div className="cm-testimonial__single">
                         <div className="author-rating">
                           <div className="author">
-                            <h5 className="name">Sohag Biswas</h5>
+                            <h5 className="name">Akshay Yaravali</h5>
                             <p className="designation">
-                              Senior WP Dev <span>Mthemeus</span>
+                              Web Designer of <span>Engro</span>
                             </p>
                           </div>
                           <div className="rating">
@@ -233,61 +167,9 @@ const Pricing = () => {
                           </div>
                         </div>
                         <p className="description">
-                          Nam ultricies sed leo eget vehi. magna quistoli mats.
-                          Inter temps semper our has been lecto. Nam ultricies
-                          sed leo eget vehi. Sed magna mats.
-                        </p>
-                        <div className="testimonial-footer">
-                          <div className="footer-left">
-                            <p className="left-text">
-                              Explosive Revenue <br />
-                              Growth <span>12.5k</span>
-                            </p>
-                          </div>
-                          <div className="quote">
-                            <span>
-                              <img
-                                src="assets/img/icons/quote.svg"
-                                className="svg"
-                                alt=""
-                              />
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* <!-- single slider --> */}
-                    <div className="swiper-slide">
-                      <div className="cm-testimonial__single">
-                        <div className="author-rating">
-                          <div className="author">
-                            <h5 className="name">Masum Sakib</h5>
-                            <p className="designation">
-                              Web Designer of <span>AXZ</span>
-                            </p>
-                          </div>
-                          <div className="rating">
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                            <span>
-                              <img src="assets/img/icons/star-svg.svg" alt="" />
-                            </span>
-                          </div>
-                        </div>
-                        <p className="description">
-                          Nam ultricies sed leo eget vehi. magna quistoli mats.
-                          Inter temps semper our has been lecto. Nam ultricies
-                          sed leo eget vehi. Sed magna mats.
+                          His work is solid, reliable and error-free — I would
+                          highly recommend them. We just wish we had known about
+                          them sooner.
                         </p>
                         <div className="testimonial-footer">
                           <div className="footer-left">

@@ -2891,6 +2891,10 @@ blockquote + p {
   border: 1px solid var(--cm-border);
   transition: var(--transition);
 }
+.cm-about-client .client-brand .single-project img{
+  height: 200px;
+  width: 200px;
+}
 @media screen and (max-width: 1400px) {
   .cm-about-client .client-brand .single-project {
     height: 200px;
@@ -4311,7 +4315,7 @@ blockquote + p {
   padding: 50px 50px 80px 50px;
   text-align: center;
   max-width: 510px;
-  max-height: 1050px;
+  max-height: 120vh;
   flex-basis: 45%;
 }
 @media screen and (max-width: 1200px) {
@@ -4868,10 +4872,13 @@ blockquote + p {
 .cm-tab-item .tab-action-item ul li:not(:last-child) {
   margin-bottom: 40px;
 }
-.cm-tab-item .tab-action-item ul li a[data-title] {
+.cm-tab-item .tab-action-item ul li {
+  cursor: pointer;
+}
+.cm-tab-item .tab-action-item ul li figure[data-title] {
   position: relative;
 }
-.cm-tab-item .tab-action-item ul li a[data-title]::after {
+.cm-tab-item .tab-action-item ul li figure[data-title]::after {
   content: attr(data-title);
   position: absolute;
   background-color: var(--cm-primary);
@@ -4885,12 +4892,15 @@ blockquote + p {
   right: 25px;
   transition: opacity 0.3s ease;
 }
-.cm-tab-item .tab-action-item ul li a[data-title]:hover::after {
+.cm-tab-item .tab-action-item ul li figure[data-title]:hover::after {
   visibility: visible;
   opacity: 1;
 }
-.cm-tab-item .tab-action-item ul li .link svg path {
-  transition: var(--transition);
+.cm-tab-item .tab-action-item ul li .link .svg {
+  font-size: 20px;
+}
+.cm-tab-item .tab-action-item ul li .active .svg {
+  color: var(--cm-primary);
 }
 .cm-tab-item .tab-action-item ul li .link:hover svg path[stroke],
 .cm-tab-item .tab-action-item ul li .active svg path[stroke] {

@@ -1,29 +1,25 @@
 import React from "react";
 import { CURRENT_TAB } from "../common/constants";
 
-const OffCanvasMenu = () => {
+const OffCanvasMenu = (props) => {
   const handleStore = (path = "/") => {
     sessionStorage.setItem(CURRENT_TAB, path);
   };
   return (
     <>
       {/* // <!-- offcanvase menu --> */}
-      <div className="cm-offcanvase">
+      <div className={`cm-offcanvase ${props.showMenu ? "cm-active" : ""}`}>
         <div className="cm-menu-overlay"></div>
-        <div className="cm-menu-inner">
-          <div className="cm-close-icon">
+        <div className={`cm-menu-inner ${props.showMenu ? "cm-active" : ""}`}>
+          <div
+            className="cm-close-icon"
+            onClick={() => props.setShowMenu(false)}
+          >
             <img src="assets/img/icons/x-lg.svg" alt="" />
           </div>
           <div className="cm-offcanvase__logo logo-area">
             <a href="/">
-              <img className="light" src="assets/img/logo/logo.svg" alt="" />
-            </a>
-            <a href="/">
-              <img
-                className="dark"
-                src="assets/img/logo/dark-logo.svg"
-                alt=""
-              />
+              <img className="light dark" src="assets/img/logo/SPP.svg" alt="" />
             </a>
           </div>
           <div className="cm-sidemenu">
@@ -78,7 +74,7 @@ const OffCanvasMenu = () => {
                       src="assets/img/icons/portfolio.svg"
                       alt=""
                     />{" "}
-                    portfolio
+                    Portfolio
                   </a>
                 </li>
                 <li>
@@ -92,7 +88,7 @@ const OffCanvasMenu = () => {
                       src="assets/img/icons/pricing.svg"
                       alt=""
                     />{" "}
-                    pricing
+                    Pricing
                   </a>
                 </li>
                 <li>
@@ -106,7 +102,7 @@ const OffCanvasMenu = () => {
                       src="assets/img/icons/education.svg"
                       alt=""
                     />{" "}
-                    education
+                    Education
                   </a>
                 </li>
                 <li>
@@ -120,7 +116,7 @@ const OffCanvasMenu = () => {
                       src="assets/img/icons/blog.svg"
                       alt=""
                     />{" "}
-                    blog
+                    Blog
                   </a>
                 </li>
                 <li>
@@ -134,7 +130,7 @@ const OffCanvasMenu = () => {
                       src="assets/img/icons/contact.svg"
                       alt=""
                     />{" "}
-                    contact
+                    Contact
                   </a>
                 </li>
               </ul>

@@ -20,23 +20,8 @@ const App = () => {
     s.src = "/src/js/utils.js";
     el.parentNode.insertBefore(s, el);
   };
-  const loadMainScript = () => {
-    let s = document.createElement("script");
-    let el = document.getElementsByTagName("script")[0];
-    s.defer = true;
-    s.src = "/src/js/main.js";
-    el.parentNode.insertBefore(s, el);
-  };
-  const loadBarbaScript = () => {
-    let s = document.createElement("script");
-    let el = document.getElementsByTagName("script")[0];
-    s.async = true;
-    s.src = "/src/js/barba.core.js";
-    el.parentNode.insertBefore(s, el);
-  };
+
   useEffect(() => {
-    loadBarbaScript()
-    loadMainScript();
     loadUtilsScript();
     if (window !== undefined) {
       const getPath = sessionStorage.getItem(CURRENT_TAB) || "/";
@@ -47,7 +32,7 @@ const App = () => {
     }
   }, []);
   return (
-    <div data-barba="wrapper">
+    <div>
       <Routes>
         <Route
           path="/"
