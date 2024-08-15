@@ -2591,6 +2591,7 @@ blockquote + p {
 .header-menu ul {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .cm-functionality {

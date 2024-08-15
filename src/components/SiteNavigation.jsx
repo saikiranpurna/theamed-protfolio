@@ -19,9 +19,7 @@ const SiteNavigation = (props) => {
   };
   const location = useLocation();
   useEffect(() => {
-    const getPath = sessionStorage.getItem(CURRENT_TAB) || "/";
-    // handleStore('/'+location.pathname);
-    console.log(location.pathname)
+    location?.pathname && setActiveTab(location.pathname)
   }, []);
   const data = [
     {
@@ -49,11 +47,11 @@ const SiteNavigation = (props) => {
       url: "/education",
       image: GiSchoolBag,
     },
-    {
-      title: "Pricing",
-      url: "/pricing",
-      image: FaMoneyCheckDollar,
-    },
+    // {
+    //   title: "Pricing",
+    //   url: "/pricing",
+    //   image: FaMoneyCheckDollar,
+    // },
     {
       title: "Blog",
       url: "/blog",

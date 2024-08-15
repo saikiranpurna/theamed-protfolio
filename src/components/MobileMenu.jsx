@@ -1,6 +1,7 @@
 import React from "react";
 
-const MobileMenu = () => {
+const MobileMenu = ({showMenu,setShowMenu}) => {
+
   return (
     //   {/* <!-- mobile menu --> */}
     <div className="cm-mobile-menu">
@@ -8,14 +9,7 @@ const MobileMenu = () => {
         <div className="menu-left">
           <div className="logo-area">
             <a href="/">
-              <img className="light" src="assets/img/logo/logo.svg" alt="axz" />
-            </a>
-            <a href="/">
-              <img
-                className="dark"
-                src="assets/img/logo/dark-logo.svg"
-                alt="axz"
-              />
+              <img className="" src="assets/img/logo/SPP.svg" alt="logo" />
             </a>
           </div>
           <div className="header-menu">
@@ -42,7 +36,7 @@ const MobileMenu = () => {
               <img className="dark svg" src="assets/img/icons/sun.svg" alt="" />
             </div>
           </div>
-          <div className="offcanvase">
+          <div className="offcanvase" onClick={()=>{setShowMenu(true)}}>
             <img
               src="assets/img/icons/bars.svg"
               alt="menu-bar"

@@ -12,25 +12,6 @@ import Portfolio from "./pages/Portfolio";
 import { CURRENT_TAB } from "./common/constants";
 
 const App = () => {
-  // return <Layout />;
-  const loadUtilsScript = () => {
-    let s = document.createElement("script");
-    let el = document.getElementsByTagName("script")[0];
-    s.defer = true;
-    s.src = "/src/js/utils.js";
-    el.parentNode.insertBefore(s, el);
-  };
-
-  useEffect(() => {
-    loadUtilsScript();
-    if (window !== undefined) {
-      const getPath = sessionStorage.getItem(CURRENT_TAB) || "/";
-      const origin = window.location.origin;
-      const path = window.location.pathname;
-      const url = origin + getPath;
-      getPath !== path ? window.location.replace(url) : null;
-    }
-  }, []);
   return (
     <div>
       <Routes>
@@ -101,6 +82,14 @@ const App = () => {
         {/* <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
         </Route> */}
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
       </Routes>
     </div>
   );

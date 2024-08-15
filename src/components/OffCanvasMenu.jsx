@@ -19,7 +19,11 @@ const OffCanvasMenu = (props) => {
           </div>
           <div className="cm-offcanvase__logo logo-area">
             <a href="/">
-              <img className="light dark" src="assets/img/logo/SPP.svg" alt="" />
+              <img
+                className="light dark"
+                src="assets/img/logo/SPP.svg"
+                alt=""
+              />
             </a>
           </div>
           <div className="cm-sidemenu">
@@ -77,7 +81,7 @@ const OffCanvasMenu = (props) => {
                     Portfolio
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="link"
                     href="/pricing"
@@ -90,7 +94,7 @@ const OffCanvasMenu = (props) => {
                     />{" "}
                     Pricing
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     className="link"
@@ -140,6 +144,13 @@ const OffCanvasMenu = (props) => {
             <h6>Contact Me</h6>
             <a href="#">+91 9491279543</a>
             <a href="#">saikiransai949@gmail.com</a>
+            <a
+              className="link"
+              href="https://github.com/saikiranpurna"
+              target="_blank"
+            >
+              Purna's GitHub
+            </a>
           </div>
         </div>
       </div>

@@ -134,8 +134,8 @@ const Contact = () => {
                 <h3 className="section-title">Talk to Us</h3>
                 <div className="cm-contact-form__content">
                   <form
-                    action="mail-sender.php"
-                    method="POST"
+                    // action="mail-sender.php"
+                    // method="POST"
                     className="cm-form"
                   >
                     <div className="single-input">

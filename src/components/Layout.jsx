@@ -22,7 +22,7 @@ const Layout = (props) => {
       <div className="cm-content">
         <div className="container">
           {/* MOBILE MENU */}
-          <MobileMenu />
+          <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
           {/* author */}
           <Author />
           {/* <!-- main content --> */}

@@ -34,6 +34,7 @@ const About = () => {
       title: "node",
     },
   ];
+
   return (
     <>
       {/* <!-- content section --> */}
@@ -143,6 +144,29 @@ const About = () => {
                 <Swiper
                   spaceBetween={40}
                   slidesPerView={3}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      autoplay: {
+                        delay: 1500,
+                        disableOnInteraction: false,
+                      },
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                      },
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      },
+                    },
+                  }}
                   autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,

@@ -62,8 +62,8 @@ const Home = () => {
           </div>
           <div className="cm-counter">
             <div className="cm-counter-single">
-              <span className="count-item theme">31.2K</span>
-              <p>Product Sale Per Day Using Out Tools.</p>
+              <span className="count-item theme">20+</span>
+              <p>Project Contributions & Professional Milestones</p>
             </div>
             <div className="cm-counter-single">
               <span className="count-item">2.3M</span>
