@@ -20,7 +20,7 @@ const SiteNavigation = (props) => {
   const location = useLocation();
   useEffect(() => {
     location?.pathname && setActiveTab(location.pathname)
-  }, []);
+  }, [location?.pathname]);
   const data = [
     {
       title: "Home",
