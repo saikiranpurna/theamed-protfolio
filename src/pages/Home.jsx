@@ -22,7 +22,7 @@ const Home = () => {
             <p>Hi! There I’m</p>
           </div>
           <h1 className="main-title">
-            I'm make <span>functional product's</span> which also delights users.
+            I make <span>functional product's</span> which also delights users.
           </h1>
           <div className="cm-contact-zone">
             <a href="mailto:saikiransai949@gmail.com">
