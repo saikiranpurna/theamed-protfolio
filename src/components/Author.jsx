@@ -20,7 +20,7 @@ const Author = () => {
           <Link to="/contact" className="cm-btn primary">
             Hire Me!
           </Link>
-          <a href="/Purna_Saikiran_Resume.pdf" className="cm-btn" download>
+          <a href="/Purna_Saikiran_Resume_3.pdf" className="cm-btn" download>
             Download CV
           </a>
         </div>
